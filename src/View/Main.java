@@ -5,6 +5,7 @@
  */
 package View;
 
+import Model.Agendamento;
 import Model.Cliente;
 import Model.Servico;
 import Model.Usuario;
@@ -21,16 +22,17 @@ public class Main {
         System.out.println(nome);
         
         
-        Servico servico = new Servico(1, "Cabelo", 20);
+        Servico servico = new Servico(1, "Cabelo Loiro", 400);
         System.out.println(servico.getDescricao());
         System.out.println(servico.getValor());
         
-        Cliente cliente = new Cliente(1, "Renatinho", "Rua teste", "08565-420");
+        Cliente cliente = new Cliente(1, "Rosangela", "Rua Brazilino", "08565-420");
         System.out.println(cliente.getNome());
         
-        Usuario usuario = new Usuario(1, "Barbeiro", "senha");
+        Usuario usuario = new Usuario(1, "Cabelereiro", "senha");
         System.out.println(usuario.getNome());
         
-        
+        Agendamento agendamento = new Agendamento(1, cliente, servico, 450, "23/12/2021 09:00");
+        System.out.println(agendamento.getCliente().getNome());
     }
 }
